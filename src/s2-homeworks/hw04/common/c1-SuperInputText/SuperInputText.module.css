@@ -1,7 +1,19 @@
 .input:focus {
+    box-shadow: 0 0 5px 1px #fff;
+    transition-duration: .3s;
 }
 
 .input {
+    outline: none;
+    margin: 10px 10px;
+    border: 1px solid #6fb5c5;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 1px #6fb5c5;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    transition-duration: .3s;
 }
 
 .inputWrapper {
