@@ -2,6 +2,7 @@
 }
 
 .radio::before {
+
 }
 
 
@@ -9,6 +10,7 @@
 }
 
 .label {
+    margin: 10px;
 }
 
 .options {
