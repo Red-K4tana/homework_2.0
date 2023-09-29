@@ -1,23 +1,46 @@
 .item {
+    display: block;
+    border-bottom: 1px solid black;
 }
 
 .item:last-of-type {
+    border-bottom: 0;
 }
 
 .users {
+
 }
 
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width:500px ;
+}
+.buttonsContainer * {
+    margin-left: 20px;
 }
 
 .container {
+    font-family: 'Montserrat', sans-serif;
+    width: 500px;
 }
 
 .thead {
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+    background-color: #a097d5;
+    width: auto;
 }
 
 .nameCol {
+    min-width: 200px;
+    padding: 0 20px;
+
 }
 
 .ageCol {
+    padding: 0 170px 0 100px;
+    font-weight: bold;
 }
