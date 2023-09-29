@@ -9,9 +9,9 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
     case 'sort': { // by name
       const users = [...state]
       if (action.payload === 'up') {
-        return users.sort((a,b) => a.age - b.age)
+        return users.sort((a,b) => b.age - a.age)
       } else {
-        return users.sort((a, b) => b.age - a.age)
+        return users.sort((a, b) => a.age - b.age)
       }
        // need to fix
     }
