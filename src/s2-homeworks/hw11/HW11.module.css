@@ -1,4 +1,7 @@
 .container {
+    margin: 50px;
+    padding: 20px;
+    background-color: #e5d6ef;
 }
 
 .wrapper {
