@@ -3,7 +3,6 @@ import s from './HW11.module.css'
 import s2 from '../../s1-main/App.module.css'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import {Box, Slider, styled, Typography} from "@mui/material";
 
 
 /*
