@@ -39,46 +39,6 @@ function HW11() {
 		}
 
 	}
-	// =================================================================================================================
-	const PrettoSlider = styled(Slider)({
-		color: '#52af77',
-		height: 8,
-		'& .MuiSlider-track': {
-			border: 'none',
-		},
-		'& .MuiSlider-thumb': {
-			height: 24,
-			width: 24,
-			backgroundColor: '#fff',
-			border: '2px solid currentColor',
-			'&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
-				boxShadow: 'inherit',
-			},
-			'&:before': {
-				display: 'none',
-			},
-		},
-		'& .MuiSlider-valueLabel': {
-			lineHeight: 1.2,
-			fontSize: 12,
-			background: 'unset',
-			padding: 0,
-			width: 32,
-			height: 32,
-			borderRadius: '50% 50% 50% 0',
-			backgroundColor: '#52af77',
-			transformOrigin: 'bottom left',
-			transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
-			'&:before': { display: 'none' },
-			'&.MuiSlider-valueLabelOpen': {
-				transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
-			},
-			'& > *': {
-				transform: 'rotate(45deg)',
-			},
-		},
-	});
-	// =================================================================================================================
 
 	return (
 		<div id={'hw11'}>
@@ -95,13 +55,13 @@ function HW11() {
 							value={value1}
 							onChange={change}
 							sx={{
+								color: '#52af77',
 								'& .MuiSlider-thumb': {
 									backgroundColor: '#ffffff',
 									border: '4px solid #52af77',
 								},
 								'& .MuiSlider-track': {
 									border: 'none',
-									backgroundColor: '#52af77',
 								},
 							}}
 							// сделать так чтоб value1 изменялось // пишет студент
@@ -117,16 +77,32 @@ function HW11() {
 							min={0}
 							value={[value1, value2]}
 							onChange={change}
+							valueLabelDisplay={'auto'}
+							sx={{
+								color: '#1976d2',
+								'& .MuiSlider-valueLabel': {
+									lineHeight: 1.2,
+									fontSize: 12,
+									background: 'unset',
+									padding: 0,
+									width: 32,
+									height: 32,
+									borderRadius: '50% 50% 50% 0',
+									backgroundColor: '#1976d2',
+									transformOrigin: 'bottom left',
+									transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
+									'&:before': { display: 'none' },
+									'&.MuiSlider-valueLabelOpen': {
+										transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
+									},
+									'& > *': {
+										transform: 'rotate(45deg)',
+									},
+								},
+							}}
 						/>
 						<span id={'hw11-value-2'} className={s.number}>{value2}</span>
 					</div>
-					<Box sx={{ m: 3 }} />
-					<Typography gutterBottom>pretto.fr</Typography>
-					<PrettoSlider
-						valueLabelDisplay="auto"
-						aria-label="pretto slider"
-						defaultValue={20}
-					/>
 				</div>
 			</div>
 		</div>
