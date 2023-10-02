@@ -4,12 +4,12 @@
 }
 
 [data-theme='2'] {
-    --color: #000000;
+    --color: #753535;
     --background: #DDEEFF;
 }
 
 [data-theme='3'] {
-    --color: #FFFFFF;
+    --color: #466c9d;
     --background: #212A34;
 }
 
