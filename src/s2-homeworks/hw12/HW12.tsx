@@ -31,13 +31,10 @@ const HW12 = () => {
 
 	useEffect(() => {
 		document.documentElement.dataset.theme = themeId + ''
-		console.log(document)
-		console.log(document.documentElement)
-		console.log(document.documentElement.dataset)
 	}, [themeId])
 
 	return (
-		<div id={'hw12'}>
+		<div id={'hw12'} data-theme={themeId}>
 			<div id={'hw12-text'} className={s2.hwTitle}>
 				Homework #12
 			</div>
