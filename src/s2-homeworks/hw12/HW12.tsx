@@ -22,15 +22,15 @@ const themes = [
 const HW12 = () => {
 
 	// взять ид темы из редакса
-	const themeId = useSelector<AppStoreType, string>(state =>
+	const themeId = useSelector<AppStoreType, number>(state =>
 		(state.theme.themeId))
 	const dispatch = useDispatch()
 	const change = (id: string) => { // дописать функцию
-		dispatch(changeThemeId(id))
+		dispatch(changeThemeId(+id))
 	}
 
 	useEffect(() => {
-		document.documentElement.dataset.theme = themeId
+		document.documentElement.dataset.theme = themeId + ''
 	}, [themeId])
 
 	return (
