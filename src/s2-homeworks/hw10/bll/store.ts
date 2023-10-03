@@ -13,5 +13,7 @@ export default store
 
 export type AppStoreType = ReturnType<typeof reducers>
 
+console.log(store.getState())
+
 // @ts-ignore
 window.store = store // for dev // для того чтобы автотесты видели состояние данных
