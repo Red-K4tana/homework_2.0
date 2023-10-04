@@ -5,18 +5,29 @@
 }
 
 .responseContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
 }
 
 .imageContainer {
+
 }
 
 .image {
+    padding-right: 40px;
 }
 
 .textContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .code {
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 
 .text {
