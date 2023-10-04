@@ -43,6 +43,7 @@ const HW13 = () => {
 
 			})
 			.catch((e) => {
+				console.log(e)
 				// дописать
 				setCode('Ошибка 400!')
 				setImage(error400)
@@ -65,8 +66,7 @@ const HW13 = () => {
 						onClick={send(true)}
 						xType={'secondary'}
 						// дописать
-						//disabled={}
-
+						disabled={!!info}
 					>
 						Send true
 					</SuperButton>
@@ -75,8 +75,7 @@ const HW13 = () => {
 						onClick={send(false)}
 						xType={'secondary'}
 						// дописать
-						//disabled={}
-
+						disabled={!!info}
 					>
 						Send false
 					</SuperButton>
@@ -85,8 +84,7 @@ const HW13 = () => {
 						onClick={send(undefined)}
 						xType={'secondary'}
 						// дописать
-						//disabled={!!info}
-
+						disabled={!!info}
 					>
 						Send undefined
 					</SuperButton>
@@ -95,8 +93,7 @@ const HW13 = () => {
 						onClick={send(null)} // имитация запроса на не корректный адрес
 						xType={'secondary'}
 						// дописать
-						//disabled={!!info}
-
+						disabled={!!info}
 					>
 						Send null
 					</SuperButton>
