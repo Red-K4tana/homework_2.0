@@ -15,7 +15,7 @@ import errorUnknown from './images/error.svg'
 * */
 
 const HW13 = () => {
-	const [code, setCode] = useState('')
+	const [code, setCode] = useState<string | number>('')
 	const [text, setText] = useState('')
 	const [info, setInfo] = useState('')
 	const [image, setImage] = useState('')
@@ -34,34 +34,34 @@ const HW13 = () => {
 		axios
 			.post(url, {success: x})
 			.then((res) => {
-				setCode('Код 200!')
+				console.log(res)
+				setCode(res.status)
 				setImage(success200)
 				// дописать
-				setText('...всё ок)')
-				setInfo('')
+				setText(res.data.errorText + '\n' + res.data.info)
+
 			})
 			.catch((e) => {
 				// дописать
+				console.log(e)
 				if (e.code === 'ERR_NETWORK') {
 					setCode('Error!')
 					setImage(errorUnknown)
-					setText('Network Error\n' +
-						'AxiosError')
-					setInfo('')
-				} else if (e.code === 'ERR_BAD_REQUEST') {
-					setCode('400')
+					setText(e.message + '\n' + e.name)
+
+				} else if (e.response.status === 400) {
+					setCode(e.response.status)
 					setImage(error400)
-					setText('Ты не отправил success в body вообще!\n' +
-						'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
-					setInfo('')
-				} else if (e.code === 'ERR_BAD_RESPONSE') {
-					setCode('500')
+					setText(e.response.data.errorText + '\n' + e.response.data.info)
+
+				} else if (e.response.status === 500) {
+					setCode(e.response.status)
 					setImage(error500)
-					setText('эмитация ошибки на сервере\n' +
-						'ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
-					setInfo('Error')
+					setText(e.response.data.errorText + '\n' + e.response.data.info)
+
 				}
 			})
+			.finally(() => (setInfo('')))
 	}
 
 	return (
