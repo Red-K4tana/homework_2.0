@@ -38,8 +38,8 @@ const HW13 = () => {
 				setCode(res.status)
 				setImage(success200)
 				// дописать
-				setText(res.data.errorText + '\n' + res.data.info)
-
+				setText(res.data.errorText)
+				setInfo('')
 			})
 			.catch((e) => {
 				// дописать
@@ -48,20 +48,20 @@ const HW13 = () => {
 					setCode('Error!')
 					setImage(errorUnknown)
 					setText(e.message + '\n' + e.name)
-
+					setInfo('')
 				} else if (e.response.status === 400) {
 					setCode(e.response.status)
 					setImage(error400)
-					setText(e.response.data.errorText + '\n' + e.response.data.info)
-
+					setText(e.response.data.errorText)
+					setInfo('')
 				} else if (e.response.status === 500) {
 					setCode(e.response.status)
 					setImage(error500)
-					setText(e.response.data.errorText + '\n' + e.response.data.info)
+					setText(e.response.data.errorText)
+					setInfo('')
 
 				}
 			})
-			.finally(() => (setInfo('')))
 	}
 
 	return (
