@@ -66,7 +66,7 @@ const HW15 = () => {
 		setCount(newCount)
 
 		setSearchParams({sort, page: newPage + '', count: newCount + ''})
-		const params = Object.fromEntries(searchParams)
+		//const params = Object.fromEntries(searchParams)
 
 		//sendQuery({sort: params.sort, page: +params.page, count: +params.count})
 
@@ -75,12 +75,11 @@ const HW15 = () => {
 
 	const onChangeSort = (newSort: string) => {
 		// делает студент
-
-		// setSort(
-		// setPage(1) // при сортировке сбрасывать на 1 страницу
+		setSort(newSort)
+		setPage(1) // при сортировке сбрасывать на 1 страницу
 
 		// sendQuery(
-		// setSearchParams(
+		setSearchParams({sort: newSort, page: page + '', count: count + ''})
 
 		//
 	}
