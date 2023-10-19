@@ -1,11 +1,14 @@
 .pagination {
-    display: flex;
+     display: flex;
 }
 
 .text1 {
-
+    margin-right: 10px;
 }
 
 .text2 {
-
+    margin-left: 10px;
+}
+.selectContainer {
+    margin-left: 90px;
 }
