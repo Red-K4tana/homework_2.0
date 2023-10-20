@@ -88,10 +88,7 @@ const HW15 = () => {
     const params = Object.fromEntries(searchParams)
     setPage(+params.page || 1)
     setCount(+params.count || 4)
-
     sendQuery({sort: params.sort, page: +params.page || 1, count: +params.count || 4})
-
-    console.log({sort: params.sort, page: +params.page, count: +params.count})
   }, [searchParams])
 
   const mappedTechs = techs.map(t => (
@@ -118,18 +115,6 @@ const HW15 = () => {
           totalCount={totalCount}
           onChange={onChangePagination}
         />
-
-        {/*<div className={s.rowHeader}>
-          <div className={s.techHeader}>
-            tech
-            <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
-          </div>
-
-          <div className={s.developerHeader}>
-            developer
-            <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
-          </div>
-        </div>*/}
 
         <table>
           <thead >
