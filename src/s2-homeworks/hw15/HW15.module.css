@@ -27,7 +27,6 @@
     padding: 10px;
     background-color: #a097d5;
     width: 600px;
-
 }
 
 .row {
@@ -35,9 +34,17 @@
     justify-content: space-around;
     padding: 10px 0;
     background-color: #cdcade;
+    transition: 0.2s;
 }
 .row:nth-child(even) {
     background-color: #7f7a9b;
+    font-family: 'Montserrat', sans-serif;
+}
+.row:nth-child(even):hover {
+    background-color: #6d688a;
+}
+.row:nth-child(odd):hover {
+    background-color: #bebad3;
 }
 
 .rowHeader_Span {

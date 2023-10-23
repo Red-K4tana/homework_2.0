@@ -1,4 +1,5 @@
 .burgerMenuIcon {
+    cursor: pointer;
 }
 
 .header {
@@ -9,7 +10,14 @@
     width: 100%;
     padding: 15px 30px;
     box-shadow: 0 0 10px #431548;
+    background-color: #ffffff;
+    z-index: 2;
 }
+.pseudoHeader {
+    width: 100%;
+    height: 60px;
+}
+
 
 .header h1 {
     font-family: 'Montserrat', sans-serif;
